@@ -1,0 +1,28 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Spec Checker Tool</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>📊 Spec Checker Tool</h1>
+    <p>Select two CSV files: one Backfill and one Spec File</p>
+
+    <div class="upload-area">
+        <label>Backfill CSV: <input type="file" id="backfillFile" accept=".csv"></label><br><br>
+        <label>Spec File CSV: <input type="file" id="specFile" accept=".csv"></label><br><br>
+        <button onclick="handleFiles()">Check Specs</button>
+    </div>
+
+    <div id="results"></div>
+    <canvas id="chartCanvas" width="400" height="200"></canvas>
+    <button id="downloadBtn" style="display:none;">Download Missing Specs</button>
+
+    <script src="libs/papaparse.min.js"></script>
+    <script src="libs/xlsx.full.min.js"></script>
+    <script src="libs/chart.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
